@@ -18,7 +18,7 @@ def setup_workspace(app_repo: str, app_name: str):
         
         # Clone the application repository
         app_path = workspace_root / app_name
-        if not app_path.exists():
+        if not os.path.exists(str(app_path)):
             subprocess.run(
                 ["git", "clone", app_repo, str(app_path)], 
                 check=True
