@@ -10,12 +10,18 @@ help:
 	@echo "Available targets:"
 	@echo "  init    - Initialize workspace with application repository"
 	@echo "  clean   - Clean the workspace"
+	@echo "  build   - Build the application"
 
 # Initialize workspace
 init:
 	@echo "Initializing workspace for $(APP_NAME)"
 	@echo "App repository: $(APP_REPO)"
 	python3 scripts/workspace/init_workspace.py --app-repo $(APP_REPO) --app-name $(APP_NAME)
+
+#build the application
+build:
+	@echo "Building application $(APP_NAME)"
+	python3 scripts/build/build_app.py --app-name $(APP_NAME)
 
 # Clean workspace
 clean:
