@@ -12,8 +12,8 @@ def build_application(app_name: str, workspace_root: str):
     """
     try:
         # Get the application directory path (two levels up from current script and into app directory)
-        # workspace_root = Path(os.getcwd()).parent.parent
-        app_path = workspace_root / app_name / app_name
+        workspace_path = Path(workspace_root)
+        app_path = workspace_path / app_name / app_name
         
         print(f"Building application in: {app_path}")
         
