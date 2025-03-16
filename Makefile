@@ -21,7 +21,7 @@ init:
 #build the application
 build:
 	@echo "Building application $(APP_NAME)"
-	python3 scripts/build/build_app.py --app-name $(APP_NAME)
+	python3 scripts/build/build_app.py --workspace-root $(WORKSPACE_ROOT) --app-name $(APP_NAME)
 
 # Clean workspace
 clean:
